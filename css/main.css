@@ -1,0 +1,93 @@
+html,
+body {
+    background: #f8f8f8;
+}
+body,
+html,
+input,
+button {
+    font-family: 'Inter', system-ui, 'Helvetica', 'Arial', sans-serif;
+}
+
+header {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+footer {
+    padding: 3rem auto;
+}
+
+a {
+    color: #000;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+}
+
+.instruction {
+    color: #999;
+}
+
+header,
+footer,
+.logo-wrapper {
+    margin: 7rem auto;
+    width: 65%;
+    max-width: 800px;
+    position: relative;
+}
+
+.logo-wrapper {
+    padding: 0 !important; /* override blocks.css */
+}
+
+.logo-wrapper img {
+    width: 100%;
+    margin: 0;
+    display: block; /* remove whitespace before and after */
+}
+
+.logo-caption {
+    font-weight: normal;
+    padding: .5rem .75rem;
+    border-radius: 4px;
+    content: attr(alt);
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transition: transform .3s, opacity .3s;
+    background: var(--block-shadow-color);
+    color: var(--block-background-color);
+    pointer-events: none;
+    transform: translate(-50%, -.25rem);
+    opacity: 0;
+}
+
+.logo-wrapper:hover .logo-caption {
+    transform: translate(-50%, .25rem);
+    opacity: 1;
+}
+
+@media only screen and (max-width: 720px) {
+    header,
+    footer,
+    .logo-wrapper {
+        width: 78%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    header,
+    footer,
+    .logo-wrapper {
+        width: 96%;
+    }
+}
